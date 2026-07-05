@@ -1,0 +1,170 @@
+media:
+  input: assets
+  output: /assets
+  extensions: [jpg, jpeg, png, gif, webp, avif, mp4, mov]
+
+content:
+  - name: site
+    label: サイト設定（動画・写真・連絡先）
+    type: file
+    path: content/site.json
+    fields:
+      - name: email
+        label: メールアドレス
+        description: Emailボタンのリンク先。空欄にするとボタンが隠れます
+        type: string
+      - name: instagram
+        label: Instagram のURL
+        description: 例 https://www.instagram.com/xxxx（空欄でボタン非表示）
+        type: string
+      - name: x
+        label: X (Twitter) のURL
+        description: 例 https://x.com/xxxx（空欄でボタン非表示）
+        type: string
+      - name: video
+        label: ピアノ動画
+        type: object
+        fields:
+          - name: youtube
+            label: YouTubeのURL
+            description: 動画ページのURLをそのまま貼り付けてください（動画IDだけでもOK）
+            type: string
+          - name: mp4
+            label: mp4ファイルのパス
+            description: メディアからアップロードした場合は /assets/ファイル名.mp4 と入力（YouTube欄が空のときに使われます）
+            type: string
+      - name: travel
+        label: 旅の写真
+        description: 追加した写真がTravelセクションに表示されます（1枚も無い間は仮の画像を表示）
+        type: object
+        list: true
+        fields:
+          - name: image
+            label: 写真
+            type: image
+          - name: caption_ja
+            label: キャプション（日本語）
+            type: string
+          - name: caption_en
+            label: キャプション（英語）
+            type: string
+          - name: caption_zh
+            label: キャプション（中文）
+            type: string
+
+  - name: ja
+    label: 文章（日本語）
+    type: file
+    path: content/ja.json
+    fields:
+      - { name: heroVertical, label: トップ・縦書きの一言, type: string }
+      - { name: heroTagline, label: トップ・キャッチコピー, type: string }
+      - { name: tagLang, label: トップ・タグ（言語名）, type: string }
+      - { name: aboutSub, label: About・サブタイトル, type: string }
+      - { name: aboutLede, label: About・書き出し, type: string }
+      - { name: aboutP1, label: About・本文1, type: text }
+      - { name: aboutP2, label: About・本文2, type: text }
+      - { name: aboutP3, label: About・本文3, type: text }
+      - { name: profRoots, label: プロフィール・出身, type: string }
+      - { name: profEdu, label: プロフィール・学歴, type: string }
+      - { name: profWork, label: プロフィール・仕事, type: string }
+      - { name: profLoves, label: プロフィール・好きなこと, type: string }
+      - { name: careerSub, label: Career・サブタイトル, type: string }
+      - { name: c1Title, label: カード1・タイトル, type: string }
+      - { name: c1Body, label: カード1・本文, type: text }
+      - { name: c2Title, label: カード2・タイトル, type: string }
+      - { name: c2Body, label: カード2・本文, type: text }
+      - { name: c3Title, label: カード3・タイトル, type: string }
+      - { name: c3Body, label: カード3・本文, type: text }
+      - { name: q1, label: 資格1, type: string }
+      - { name: q2, label: 資格2, type: string }
+      - { name: q3, label: 資格3, type: string }
+      - { name: q4, label: 資格4, type: string }
+      - { name: q5, label: 資格5, type: string }
+      - { name: pianoSub, label: Piano・サブタイトル, type: string }
+      - { name: pianoLead, label: Piano・リード文, type: text }
+      - { name: videoSub, label: Piano・動画の注記, type: string }
+      - { name: travelSub, label: Travel・サブタイトル, type: string }
+      - { name: travelLead, label: Travel・リード文, type: text }
+      - { name: trav1, label: 仮キャプション1, type: string }
+      - { name: trav2, label: 仮キャプション2, type: string }
+      - { name: trav3, label: 仮キャプション3, type: string }
+      - { name: contactLead, label: Contact・リード文, type: string }
+
+  - name: en
+    label: 文章（英語）
+    type: file
+    path: content/en.json
+    fields:
+      - { name: heroVertical, label: トップ・縦書きの一言, type: string }
+      - { name: heroTagline, label: トップ・キャッチコピー, type: string }
+      - { name: tagLang, label: トップ・タグ（言語名）, type: string }
+      - { name: aboutSub, label: About・サブタイトル, type: string }
+      - { name: aboutLede, label: About・書き出し, type: string }
+      - { name: aboutP1, label: About・本文1, type: text }
+      - { name: aboutP2, label: About・本文2, type: text }
+      - { name: aboutP3, label: About・本文3, type: text }
+      - { name: profRoots, label: プロフィール・出身, type: string }
+      - { name: profEdu, label: プロフィール・学歴, type: string }
+      - { name: profWork, label: プロフィール・仕事, type: string }
+      - { name: profLoves, label: プロフィール・好きなこと, type: string }
+      - { name: careerSub, label: Career・サブタイトル, type: string }
+      - { name: c1Title, label: カード1・タイトル, type: string }
+      - { name: c1Body, label: カード1・本文, type: text }
+      - { name: c2Title, label: カード2・タイトル, type: string }
+      - { name: c2Body, label: カード2・本文, type: text }
+      - { name: c3Title, label: カード3・タイトル, type: string }
+      - { name: c3Body, label: カード3・本文, type: text }
+      - { name: q1, label: 資格1, type: string }
+      - { name: q2, label: 資格2, type: string }
+      - { name: q3, label: 資格3, type: string }
+      - { name: q4, label: 資格4, type: string }
+      - { name: q5, label: 資格5, type: string }
+      - { name: pianoSub, label: Piano・サブタイトル, type: string }
+      - { name: pianoLead, label: Piano・リード文, type: text }
+      - { name: videoSub, label: Piano・動画の注記, type: string }
+      - { name: travelSub, label: Travel・サブタイトル, type: string }
+      - { name: travelLead, label: Travel・リード文, type: text }
+      - { name: trav1, label: 仮キャプション1, type: string }
+      - { name: trav2, label: 仮キャプション2, type: string }
+      - { name: trav3, label: 仮キャプション3, type: string }
+      - { name: contactLead, label: Contact・リード文, type: string }
+
+  - name: zh
+    label: 文章（中文）
+    type: file
+    path: content/zh.json
+    fields:
+      - { name: heroVertical, label: トップ・縦書きの一言, type: string }
+      - { name: heroTagline, label: トップ・キャッチコピー, type: string }
+      - { name: tagLang, label: トップ・タグ（言語名）, type: string }
+      - { name: aboutSub, label: About・サブタイトル, type: string }
+      - { name: aboutLede, label: About・書き出し, type: string }
+      - { name: aboutP1, label: About・本文1, type: text }
+      - { name: aboutP2, label: About・本文2, type: text }
+      - { name: aboutP3, label: About・本文3, type: text }
+      - { name: profRoots, label: プロフィール・出身, type: string }
+      - { name: profEdu, label: プロフィール・学歴, type: string }
+      - { name: profWork, label: プロフィール・仕事, type: string }
+      - { name: profLoves, label: プロフィール・好きなこと, type: string }
+      - { name: careerSub, label: Career・サブタイトル, type: string }
+      - { name: c1Title, label: カード1・タイトル, type: string }
+      - { name: c1Body, label: カード1・本文, type: text }
+      - { name: c2Title, label: カード2・タイトル, type: string }
+      - { name: c2Body, label: カード2・本文, type: text }
+      - { name: c3Title, label: カード3・タイトル, type: string }
+      - { name: c3Body, label: カード3・本文, type: text }
+      - { name: q1, label: 資格1, type: string }
+      - { name: q2, label: 資格2, type: string }
+      - { name: q3, label: 資格3, type: string }
+      - { name: q4, label: 資格4, type: string }
+      - { name: q5, label: 資格5, type: string }
+      - { name: pianoSub, label: Piano・サブタイトル, type: string }
+      - { name: pianoLead, label: Piano・リード文, type: text }
+      - { name: videoSub, label: Piano・動画の注記, type: string }
+      - { name: travelSub, label: Travel・サブタイトル, type: string }
+      - { name: travelLead, label: Travel・リード文, type: text }
+      - { name: trav1, label: 仮キャプション1, type: string }
+      - { name: trav2, label: 仮キャプション2, type: string }
+      - { name: trav3, label: 仮キャプション3, type: string }
+      - { name: contactLead, label: Contact・リード文, type: string }
