@@ -247,40 +247,15 @@ html[data-lang="zh"] body { line-height: 2; }
 
 .hero-inner { position: relative; z-index: 1; }
 
-.hero-kicker {
-  font-family: var(--en-serif);
-  font-style: italic;
-  font-size: 17px;
-  letter-spacing: 0.3em;
-  color: var(--lilac);
-  margin-bottom: 10px;
-  animation: fadeUp 1.1s 0.1s cubic-bezier(0.22, 1, 0.36, 1) both;
-}
-
-.hero-name-en {
-  font-family: var(--display);
-  font-weight: 400;
-  font-size: clamp(44px, 10vw, 108px);
-  letter-spacing: 0.08em;
+/* キャッチコピーが主役。名前は下の小さな一行に */
+.hero-copy {
+  font-family: var(--serif);
+  font-weight: 600;
+  font-size: clamp(28px, 5.2vw, 56px);
+  letter-spacing: 0.14em;
+  line-height: 1.75;
   color: var(--lilac-dark);
-  line-height: 1.15;
-}
-
-/* 名前は1文字ずつ舞い上がる（単語の途中では改行しない） */
-.hero-name-en .word {
-  display: inline-block;
-  white-space: nowrap;
-}
-
-.hero-name-en .word span {
-  display: inline-block;
-  opacity: 0;
-  animation: letterUp 0.85s calc(0.25s + var(--i) * 0.055s) cubic-bezier(0.22, 1, 0.36, 1) forwards;
-}
-
-@keyframes letterUp {
-  from { opacity: 0; transform: translateY(34px) rotate(5deg) scale(0.92); }
-  to   { opacity: 1; transform: none; }
+  animation: fadeUp 1.2s 0.15s cubic-bezier(0.22, 1, 0.36, 1) both;
 }
 
 .hero-divider {
@@ -288,8 +263,8 @@ html[data-lang="zh"] body { line-height: 2; }
   align-items: center;
   justify-content: center;
   gap: 22px;
-  margin: 26px 0 30px;
-  animation: fadeUp 1.1s 0.4s cubic-bezier(0.22, 1, 0.36, 1) both;
+  margin: 38px 0 34px;
+  animation: fadeUp 1.1s 0.5s cubic-bezier(0.22, 1, 0.36, 1) both;
 }
 .hero-divider span {
   display: block;
@@ -309,19 +284,10 @@ html[data-lang="zh"] body { line-height: 2; }
 .hero-divider em {
   font-family: var(--serif);
   font-style: normal;
-  font-size: 21px;
-  letter-spacing: 0.3em;
+  font-size: 15px;
+  letter-spacing: 0.22em;
   color: var(--lilac-deep);
   white-space: nowrap;
-}
-
-.hero-tagline {
-  font-family: var(--serif);
-  font-size: 16.5px;
-  letter-spacing: 0.14em;
-  color: var(--ink-soft);
-  margin-bottom: 40px;
-  animation: fadeUp 1.1s 0.55s cubic-bezier(0.22, 1, 0.36, 1) both;
 }
 
 .hero-tags {
@@ -941,8 +907,7 @@ html[data-lang="zh"] body { line-height: 2; }
   .reveal { opacity: 1; transform: none; transition: none; }
   .petal, .notes-bg span { display: none; }
   .blob, .video-icon, .scroll-cue span::after,
-  .hero-kicker, .hero-divider, .hero-tagline, .hero-tags { animation: none; }
-  .hero-name-en .word span { animation: none; opacity: 1; }
+  .hero-copy, .hero-divider, .hero-tags { animation: none; }
   .hero-divider span { animation: none; transform: none; }
   .section-head .sec-no, .section-head .sec-title-en, .section-head .sec-title-ja,
   .contact-inner .sec-no, .contact-inner .sec-title-en { opacity: 1; transform: none; transition: none; }
