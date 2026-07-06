@@ -81,6 +81,7 @@ content:
       - { name: q3, label: 資格3, type: string }
       - { name: q4, label: 資格4, type: string }
       - { name: q5, label: 資格5, type: string }
+      - { name: q6, label: 資格6, type: string }
       - { name: pianoSub, label: Piano・サブタイトル, type: string }
       - { name: pianoLead, label: Piano・リード文, type: text }
       - { name: videoSub, label: Piano・動画の注記, type: string }
@@ -120,6 +121,7 @@ content:
       - { name: q3, label: 資格3, type: string }
       - { name: q4, label: 資格4, type: string }
       - { name: q5, label: 資格5, type: string }
+      - { name: q6, label: 資格6, type: string }
       - { name: pianoSub, label: Piano・サブタイトル, type: string }
       - { name: pianoLead, label: Piano・リード文, type: text }
       - { name: videoSub, label: Piano・動画の注記, type: string }
@@ -159,6 +161,7 @@ content:
       - { name: q3, label: 資格3, type: string }
       - { name: q4, label: 資格4, type: string }
       - { name: q5, label: 資格5, type: string }
+      - { name: q6, label: 資格6, type: string }
       - { name: pianoSub, label: Piano・サブタイトル, type: string }
       - { name: pianoLead, label: Piano・リード文, type: text }
       - { name: videoSub, label: Piano・動画の注記, type: string }
