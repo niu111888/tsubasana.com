@@ -94,7 +94,8 @@ html[data-lang="zh"] body { line-height: 2; }
 .nav.scrolled { box-shadow: 0 12px 34px rgba(124, 82, 149, 0.14); }
 
 .nav-logo {
-  font-family: var(--display);
+  font-family: var(--en-serif);
+  font-weight: 600;
   font-size: 21px;
   letter-spacing: 0.14em;
   color: var(--lilac-dark);
@@ -284,9 +285,10 @@ html[data-lang="zh"] body { line-height: 2; }
 .hero-divider em {
   font-family: var(--serif);
   font-style: normal;
-  font-size: 15px;
+  font-weight: 600;
+  font-size: 16.5px;
   letter-spacing: 0.22em;
-  color: var(--lilac-deep);
+  color: var(--lilac-dark);
   white-space: nowrap;
 }
 
@@ -849,7 +851,8 @@ html[data-lang="zh"] body { line-height: 2; }
 }
 
 .footer-name {
-  font-family: var(--display);
+  font-family: var(--en-serif);
+  font-weight: 600;
   font-size: 20px;
   letter-spacing: 0.3em;
   color: #d9c8ee;
